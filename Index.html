@@ -1,1 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>For Be ef ef 💕</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff0f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px 15px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            background: rgba(255, 240, 245, 0.7);
+            backdrop-filter: blur(2px);
+            border-radius: 40px 40px 30px 30px;
+            padding: 25px 20px 40px;
+            box-shadow: 0 10px 40px rgba(255, 105, 135, 0.15);
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
+            border: 1px solid rgba(255, 182, 193, 0.3);
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #d6336c;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-family: 'Georgia', serif;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #d87093;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            font-style: italic;
+            border-bottom: 1px dashed #f8c8d8;
+            padding-bottom: 15px;
+        }
+
+        .letter {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 28px;
+            padding: 22px 18px;
+            margin-bottom: 22px;
+            border-left: 4px solid #ff8fab;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2);
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.2s;
+        }
+
+        .letter p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #5a3d44;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .letter p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cebuano {
+            font-family: 'Georgia', serif;
+            font-weight: 300;
+            color: #b3415c;
+        }
+
+        .joke-box {
+            background: #ffe4ec;
+            border-radius: 28px;
+            padding: 20px 18px;
+            margin-bottom: 22px;
+            border: 2px solid #ffb6c9;
+            box-shadow: 0 4px 12px rgba(255, 105, 135, 0.1);
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.4s;
+        }
+
+        .joke-box p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #5a3d44;
+            font-weight: 400;
+        }
+
+        .joke-box .emoji-big {
+            font-size: 1.8rem;
+            display: inline-block;
+            margin-right: 4px;
+        }
+
+        .sweet-joke-line {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 16px 18px;
+            margin-bottom: 18px;
+            border: 1px solid #fcc8d8;
+            font-size: 1.05rem;
+            color: #5a3d44;
+            line-height: 1.6;
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+        }
+
+        .sweet-joke-line .italic {
+            font-style: italic;
+            color: #b3415c;
+        }
+
+        .bangko-line {
+            background: #ffd9e3;
+            border-radius: 20px;
+            padding: 14px 18px;
+            margin-bottom: 22px;
+            border: 2px dashed #ff8fab;
+            font-size: 1.1rem;
+            color: #7a2e44;
+            text-align: center;
+            font-weight: 600;
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.6s;
+        }
+
+        .secret-area {
+            text-align: center;
+            margin: 28px 0 22px;
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.7s;
+        }
+
+        .heart-btn {
+            background: none;
+            border: none;
+            font-size: 4.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            filter: drop-shadow(0 4px 12px rgba(255, 80, 120, 0.3));
+            animation: pulseHeart 2s infinite;
+        }
+
+        .heart-btn:hover {
+            transform: scale(1.15);
+        }
+
+        .heart-btn:active {
+            transform: scale(0.9);
+        }
+
+        @keyframes pulseHeart {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .secret-message {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 24px;
+            padding: 18px 16px;
+            margin-top: 12px;
+            border: 2px solid #ff8fab;
+            display: none;
+            animation: fadeUp 0.5s ease forwards;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #4a2e36;
+        }
+
+        .secret-message.show {
+            display: block;
+        }
+
+        .secret-message .big-heart {
+            font-size: 2rem;
+            display: block;
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        /* ===== PHOTO REVEAL SECTION ===== */
+        .photo-section {
+            text-align: center;
+            margin: 25px 0;
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.75s;
+        }
+
+        .reveal-btn {
+            background: #ff8fab;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 105, 135, 0.3);
+            transition: 0.3s;
+        }
+
+        .reveal-btn:hover {
+            transform: scale(1.02);
+            background: #d6336c;
+        }
+
+        .reveal-btn:active {
+            transform: scale(0.95);
+        }
+
+        .photo-reveal {
+            display: none;
+            margin-top: 20px;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .photo-reveal.show {
+            display: block;
+        }
+
+        .photo-reveal .bea-text {
+            font-size: 1.2rem;
+            color: #d6336c;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .photo-reveal .bea-text span {
+            font-size: 1rem;
+            color: #b3415c;
+            font-weight: 400;
+        }
+
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .photo-grid img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #ff8fab;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(255, 105, 135, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .number-section {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 28px;
+            padding: 18px 16px 22px;
+            margin: 22px 0 20px;
+            border: 1px solid #f8c8d8;
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.8s;
+        }
+
+        .number-section label {
+            display: block;
+            font-size: 0.95rem;
+            color: #b3415c;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .number-section .sub-label {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #d87093;
+            margin-bottom: 12px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .input-row input {
+            flex: 1;
+            min-width: 180px;
+            padding: 12px 16px;
+            border: 2px solid #f8c8d8;
+            border-radius: 50px;
+            font-size: 1rem;
+            background: white;
+            outline: none;
+            transition: 0.3s;
+            color: #333;
+        }
+
+        .input-row input:focus {
+            border-color: #ff8fab;
+            box-shadow: 0 0 0 4px rgba(255, 143, 171, 0.15);
+        }
+
+        .input-row button {
+            padding: 12px 28px;
+            background: #d6336c;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(214, 51, 108, 0.3);
+        }
+
+        .input-row button:hover {
+            background: #b82a5a;
+            transform: scale(1.02);
+        }
+
+        .input-row button:active {
+            transform: scale(0.96);
+        }
+
+        .saved-feedback {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #d6336c;
+            font-weight: 500;
+            min-height: 24px;
+        }
+
+        .music-section {
+            text-align: center;
+            margin: 18px 0 10px;
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+            animation-delay: 0.9s;
+        }
+
+        .music-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(145deg, #ff8fab, #d6336c);
+            color: white;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(214, 51, 108, 0.35);
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .music-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(214, 51, 108, 0.4);
+        }
+
+        .music-btn:active {
+            transform: scale(0.95);
+        }
+
+        .music-btn .icon {
+            font-size: 1.4rem;
+            margin-right: 8px;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #d87093;
+            margin-top: 25px;
+            opacity: 0.7;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 18px 14px 30px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .letter p, .joke-box p, .sweet-joke-line, .bangko-line {
+                font-size: 0.95rem;
+            }
+            .heart-btn {
+                font-size: 3.4rem;
+            }
+            .photo-grid img {
+                width: 100px;
+                height: 100px;
+            }
+            .input-row input {
+                min-width: 140px;
+                font-size: 0.9rem;
+            }
+            .music-btn {
+                font-size: 1rem;
+                padding: 12px 24px;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                padding: 35px 30px 45px;
+            }
+            .letter p, .joke-box p {
+                font-size: 1.15rem;
+            }
+            .photo-grid img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <h1>🌸 Be ef ef</h1>
+    <div class="subtitle">— a little something for you —</div>
+
+    <!-- ===== BELATED BIRTHDAY LETTER ===== -->
+    <div class="letter">
+        <p><span class="cebuano"> Belated Happy birthday, Be ef ef.</span></p>
+        <p><span class="cebuano">Unta naay tuig mo abot sa imo,</span><br>
+        <span class="cebuano">unta nga himsog imong kalawasan diha,</span><br>
+        <span class="cebuano">unta ma master natong gi praktisan nimong sayaw.</span></p>
+        <p><span class="cebuano">Unta nga d naka maka mata ugma, lablab ka sa akoa, Be ef ef.🫶</span></p>
+        <p><span class="cebuano">Unta nga sugdan na nato ni atong pag storya</span><br>
+        <span class="cebuano">kay aron ma text-an sa nako si Cupido</span><br>
+        <span class="cebuano">nga sugdan na nyag pana atong matag usang kasingkasing.</span></p>
+    </div>
+
+    <!-- ===== SWEET + JOKE LINE (HIGHLIGHT REMOVED) ===== -->
+    <div class="sweet-joke-line">
+        <span class="italic">Kabalo ko nga bag o rajud ta nag ilaila,</span><br>
+        ug ipadayon nato ni, mas bullyhon pa taka 🫶
+    </div>
+
+    <!-- ===== THE ITIK / UNGGOY POEM (JOKE) ===== -->
+    <div class="joke-box">
+        <p>
+            <span class="emoji-big">🦆</span> <em>“I don't really say I love you.</em><br>
+            Instead, I say —
+        </p>
+        <p style="margin-top: 10px; font-style: italic; color: #a04058;">
+            “Ikaw ang bugtong itik nga gakapakapa<br>
+            sa malapukon kong dughan<br>
+            og ikaw ang tingting nga nagabagting<br>
+            sa akong kasingkasing<br>
+            og saksi ang mga unggoy nga nag langoy langoy<br>
+            kilid sa hagonoy sa akong gugmang<br>
+            ikaw ra ang gi ila”
+        </p>
+        <div style="text-align: right; font-size: 2.2rem; margin-top: 4px;">🦃🦃</div>
+    </div>
+
+    <!-- ===== BANGKO LINE ===== -->
+    <div class="bangko-line">
+        Ganahan kos imong katawa kay lami kaayu.<br>
+        <span style="font-size: 1.3rem;">Lami bunalag bangko</span> 😆
+    </div>
+
+    <!-- ===== SECRET HEART ===== -->
+    <div class="secret-area">
+        <button class="heart-btn" id="heartBtn" aria-label="Click me">💗</button>
+        <div style="font-size: 0.8rem; color: #d87093; margin-top: 2px;">(click the heart 👆)</div>
+
+        <div class="secret-message" id="secretMessage">
+            <p style="font-weight: 500; color: #b3415c;">✨ A secret for you, Be Ef Ef ✨</p>
+            <p>
+                I know we just met, but there's something about your laugh<br>
+                that makes my heart do weird things.<br><br>
+                And honestly?<br>
+                <span style="font-weight: 600; color: #d6336c;">I'd love to get to know you more.</span>
+            </p>
+            <div class="big-heart">💕💕💕</div>
+            <p style="font-size: 0.8rem; color: #b3415c; margin-top: 6px;">
+                — from someone who thinks you're pretty amazing already
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== PHOTO REVEAL SECTION (NEW!) ===== -->
+    <div class="photo-section">
+        <button class="reveal-btn" id="revealBtn">💕 Click mo ko 👆</button>
+
+        <div class="photo-reveal" id="photoReveal">
+            <p class="bea-text">
+                mura jud kag si Bea Alonzo ay🥹<br>
+                <span>Crush pa naman nako si Bea Alonzo</span>
+            </p>
+            <div class="photo-grid">
+                <img src="https://i.imgur.com/F3tuROE.jpeg" alt="Be Ef Ef 1">
+                <img src="https://i.imgur.com/vy7L7MS.jpeg" alt="Be Ef Ef 2">
+                <img src="https://i.imgur.com/CMp6nqb.jpeg" alt="Be Ef Ef 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NUMBER INPUT ===== -->
+    <div class="number-section">
+        <label>📱 Save me as <strong>“My Be ef ef”</strong></label>
+        <div class="sub-label">(para ma text-an taka, no weird stuff. Just bullying you more🫶)</div>
+        <div class="input-row">
+            <input type="tel" id="phoneInput" placeholder="Your number here..." maxlength="15">
+            <button id="saveBtn">💾 Save</button>
+        </div>
+        <div class="saved-feedback" id="feedback"></div>
+    </div>
+
+    <!-- ===== MUSIC BUTTON ===== -->
+    <div class="music-section">
+        <a href="#" id="musicLink" class="music-btn" target="_blank">
+            <span class="icon">🎵</span> Play a song for you
+        </a>
+        <div style="font-size: 0.7rem; color: #d87093; margin-top: 8px;">
+            (click to open — I picked this just for you)
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer-note">
+        made with 💕 on a phone • for Be ef ef
+    </div>
+
+</div>
+
+<script>
+    // ========================================
+    // 1. SECRET HEART — toggle message
+    // ========================================
+    const heartBtn = document.getElementById('heartBtn');
+    const secretMsg = document.getElementById('secretMessage');
+
+    heartBtn.addEventListener('click', function() {
+        secretMsg.classList.toggle('show');
+        if (secretMsg.classList.contains('show')) {
+            heartBtn.textContent = '💖';
+        } else {
+            heartBtn.textContent = '💗';
+        }
+    });
+
+    // ========================================
+    // 2. PHOTO REVEAL — click to show photos
+    // ========================================
+    const revealBtn = document.getElementById('revealBtn');
+    const photoReveal = document.getElementById('photoReveal');
+
+    revealBtn.addEventListener('click', function() {
+        if (photoReveal.classList.contains('show')) {
+            photoReveal.classList.remove('show');
+            this.textContent = '💕 Click mo ko 👆';
+            this.style.background = '#ff8fab';
+        } else {
+            photoReveal.classList.add('show');
+            this.textContent = '💕 Kita na nako si Bea Alonzo! 🥹';
+            this.style.background = '#d6336c';
+        }
+    });
+
+    // ========================================
+    // 3. SAVE NUMBER — with cute feedback
+    // ========================================
+    const phoneInput = document.getElementById('phoneInput');
+    const saveBtn = document.getElementById('saveBtn');
+    const feedback = document.getElementById('feedback');
+
+    saveBtn.addEventListener('click', function() {
+        const number = phoneInput.value.trim();
+        if (number === '') {
+            feedback.textContent = '🙈 Type your number first, Be ef ef!';
+            feedback.style.color = '#b3415c';
+            return;
+        }
+
+        const digitsOnly = number.replace(/[\s\-()+]/g, '');
+        if (digitsOnly.length < 7) {
+            feedback.textContent = '📵 Hmm, that looks too short. Try again?';
+            feedback.style.color = '#b3415c';
+            return;
+        }
+
+        localStorage.setItem('beEfEfNumber', number);
+        feedback.innerHTML = '✅ Saved! You\'re now <strong>"Be ef ef"</strong> in my heart 💕';
+        feedback.style.color = '#d6336c';
+
+        setTimeout(() => {
+            phoneInput.value = '';
+        }, 2000);
+    });
+
+    window.addEventListener('load', function() {
+        const saved = localStorage.getItem('beEfEfNumber');
+        if (saved) {
+            feedback.innerHTML = `📱 Last saved: <strong>${saved}</strong> (I remember you!)`;
+            feedback.style.color = '#d87093';
+        }
+    });
+
+    // ========================================
+    // 4. MUSIC BUTTON
+    // ========================================
+    const musicLink = document.getElementById('musicLink');
+    const YOUR_MUSIC_URL = 'https://m.youtube.com/watch?v=Er8jkigZ_EY&list=RDGMEMZhPoP0aO_KQy8cFkwREHfQVMEr8jkigZ_EY&start_radio=1';
+    musicLink.href = YOUR_MUSIC_URL;
+
+    console.log('💕 Be ef ef — this website was made just for you :>.');
+    console.log('🦃 Click the heart for a secret!');
+</script>
+
+</body>
+  </html>
